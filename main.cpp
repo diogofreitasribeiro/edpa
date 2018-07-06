@@ -142,5 +142,6 @@ cout << "\n------------------------------------------TEMPO TOTAL----------------
 	free (filaCliente);
 	free (filaCaixa);
 	
+	cin.get();
     return 0;
 }
