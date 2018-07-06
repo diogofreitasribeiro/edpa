@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 int GerarCliente(int capacityMax){
 
     return rand() % capacityMax + 1;
@@ -74,17 +73,17 @@ void exibeFila(fila *FILA, int x) {
     }
     fila *tmp;
     tmp = FILA->prox;
-    printf("Fila :");
+    //printf("Fila:");
     while( tmp != NULL){
-        printf("%5d - ", tmp->id);
-        printf("%5d\n", tmp->QIT);
+        printf("Fila pos %d - ", tmp->id);
+        printf("%d itens na cesta\n", tmp->QIT);
         tmp = tmp->prox;
     }
 }
 
 fila *retiraCliente(fila *FILA) {
     if(FILA->prox == NULL){
-        printf("Filas Clientes já esta vazia\n");
+        //printf("Filas Clientes já esta vazia\n");
         return NULL;
     }else{
         fila *tmp = FILA->prox;

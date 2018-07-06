@@ -6,6 +6,7 @@ struct Node
 	int id;
     int val;
     int auxVal;
+    int itensProcessados; //nova linha
     struct Node *left, *right;
 };
  
