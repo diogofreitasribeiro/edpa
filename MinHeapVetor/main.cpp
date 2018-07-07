@@ -94,8 +94,8 @@ int main()
 	
 //------------ÁREA DE DEFINIÇÃO DA QUANTIDADE DE CAIXAS E CLIENTES--------------------------------------------------
 
-	const int MAX_NUMBER_OF_CLIENTS =  rand() % 10000 + 1;
-	const int MAX_NUMBER_OF_CASHIERS =  rand() % MAX_NUMBER_OF_CLIENTS + 1;
+	const int MAX_NUMBER_OF_CLIENTS =  10000;//rand() % 10000 + 1;
+	const int MAX_NUMBER_OF_CASHIERS =  5000;//rand() % MAX_NUMBER_OF_CLIENTS + 1;
 	
 //-------------------------------PROCESSAMENTO DO PROGRAMA ----------------------------------------------------------
 	
@@ -138,6 +138,8 @@ cout << "\n------------------------------------------TEMPO TOTAL----------------
 	
 	printf("\n O tempo total de atendimento foi de: %d unidades de tempo.", tempo);
 	cout<<"\n\n";
+	
+	printf("O custo de promover/rebaixar CX=%d caixas foi de %d vezes", MAX_NUMBER_OF_CASHIERS, custoTrocas);
 	
 	free (filaCliente);
 	free (filaCaixa);

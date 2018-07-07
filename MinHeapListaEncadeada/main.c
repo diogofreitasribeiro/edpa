@@ -19,6 +19,8 @@ typedef struct Heap{
 
 int CL=0;
 
+int custoTrocas = 0;
+
 
 struct Heap * PercorreHeap(Heap * heap) ;
 
@@ -38,6 +40,7 @@ struct Heap * Promove(Heap *Pai){
     Pai->pai->velocidade=velocidadetemp;
     Pai->pai->idCaixa = idcaixatmp;
     Pai->pai->tempo = tempotmp;
+    custoTrocas++;
     return Pai;
 
 
@@ -81,7 +84,7 @@ struct Heap * Rebaixa(Heap *Pai){
     Pai->pai->velocidade=velocidadetemp;
     Pai->pai->idCaixa = idcaixatmp;
     Pai->pai->tempo = tempotmp;
-
+	custoTrocas++;
     Impressao(Pai);
     return Pai;
 
@@ -152,6 +155,8 @@ void Atendimento(fila *Cliente, fila *Caixa){
 
     Cli = Cliente->prox;
     Cai = Caixa->prox;
+    
+    Heap * heap;
 
 
     while (Cli->prox != NULL) {
@@ -168,7 +173,7 @@ void Atendimento(fila *Cliente, fila *Caixa){
         qteitens = Cli->QIT;
         tempo = velocidadecaixa * qteitens;
 
-        Heap * heap = (Heap *) malloc(sizeof(Heap));
+        heap = (Heap *) malloc(sizeof(Heap));
 
         printf("\n\nContador: %d", cont);
         if(cont == 1) {
@@ -226,8 +231,8 @@ void Atendimento(fila *Cliente, fila *Caixa){
         }
 
     }
-
-
+    
+    free(heap);
 }
 
 
@@ -283,6 +288,11 @@ int main() {
     Atendimento(Cliente, Caixa);
 
 
-
+	printf("\n\n\n O custo de promover/rebaixar CX=%d caixas foi de %d vezes", CX, custoTrocas);
+	char str [80];
+	scanf ("%79s",str);
+	
+	free(Caixa);
+	free(Cliente);
     return 0;
 }
