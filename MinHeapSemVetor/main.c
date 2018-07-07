@@ -288,7 +288,7 @@ int main() {
     Atendimento(Cliente, Caixa);
 
 
-	printf("\n\n\n O custo de promover/rebaixar CX=%d caixas foi de %d vezes", CX, custoTrocas);
+	//printf("\n\n\n O custo de promover/rebaixar CX=%d caixas foi de %d vezes", CX, custoTrocas);
 	char str [80];
 	scanf ("%79s",str);
 	

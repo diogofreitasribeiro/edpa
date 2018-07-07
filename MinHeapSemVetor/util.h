@@ -2,13 +2,11 @@
 
 int GerarCliente(){
 
-    //return (rand()%10000)+1;
-    return 10000;
+    return (rand()%10000)+1;
 }
 
 int GerarCaixa(int CL){
-    //return  rand()%(CL+1);
-    return 5000;
+    return  rand()%(CL+1);
 }
 
 
