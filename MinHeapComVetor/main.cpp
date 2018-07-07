@@ -139,7 +139,6 @@ cout << "\n------------------------------------------TEMPO TOTAL----------------
 	printf("\n O tempo total de atendimento foi de: %d unidades de tempo.", tempo);
 	cout<<"\n\n";
 	
-	//printf("O custo de promover/rebaixar CX=%d caixas foi de %d vezes", MAX_NUMBER_OF_CASHIERS, custoTrocas);
 	
 	free (filaCliente);
 	free (filaCaixa);
