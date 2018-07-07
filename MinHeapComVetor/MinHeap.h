@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
  
-int custoTrocas = 0; 
- 
 // Min Heap
 struct MinHeap
 {
@@ -42,8 +40,6 @@ void promoteDemoteMinHeap(struct MinHeap* minHeap, int idx)
         swapNode(&minHeap->array[parent], &minHeap->array[idx]);
         promoteDemoteMinHeap(minHeap, parent);
     }
-    
-    custoTrocas++;
 }
  
 // Inserir um novo nó

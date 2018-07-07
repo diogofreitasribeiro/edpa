@@ -19,8 +19,6 @@ typedef struct Heap{
 
 int CL=0;
 
-int custoTrocas = 0;
-
 
 struct Heap * PercorreHeap(Heap * heap) ;
 
@@ -40,7 +38,6 @@ struct Heap * Promove(Heap *Pai){
     Pai->pai->velocidade=velocidadetemp;
     Pai->pai->idCaixa = idcaixatmp;
     Pai->pai->tempo = tempotmp;
-    custoTrocas++;
     return Pai;
 
 
@@ -84,7 +81,6 @@ struct Heap * Rebaixa(Heap *Pai){
     Pai->pai->velocidade=velocidadetemp;
     Pai->pai->idCaixa = idcaixatmp;
     Pai->pai->tempo = tempotmp;
-	custoTrocas++;
     Impressao(Pai);
     return Pai;
 
